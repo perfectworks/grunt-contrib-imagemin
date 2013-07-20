@@ -28,7 +28,7 @@ module.exports = function (grunt) {
         var options = this.options();
         var optipngArgs = ['-strip', 'all'];
         var jpegtranArgs = ['-copy', 'none', '-optimize'];
-        var cacheDirectory = options.cache === true ? os.tmpdir() : options.cache;
+        var cacheDirectory = os.tmpdir();
 
         if (typeof options.optimizationLevel === 'number') {
             optipngArgs.push('-o', options.optimizationLevel);
